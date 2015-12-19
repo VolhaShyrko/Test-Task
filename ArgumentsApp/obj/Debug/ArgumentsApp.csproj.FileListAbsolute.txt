@@ -1,0 +1,17 @@
+c:\users\администратор\documents\visual studio 2012\Projects\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.exe.config
+c:\users\администратор\documents\visual studio 2012\Projects\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.exe
+c:\users\администратор\documents\visual studio 2012\Projects\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.pdb
+c:\users\администратор\documents\visual studio 2012\Projects\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.exe
+c:\users\администратор\documents\visual studio 2012\Projects\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.pdb
+C:\Users\Volha_Shyrko\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.exe.config
+C:\Users\Volha_Shyrko\Desktop\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.exe
+C:\Users\Volha_Shyrko\Desktop\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.pdb
+C:\Users\Volha_Shyrko\Desktop\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.csprojResolveAssemblyReference.cache
+C:\Users\Volha_Shyrko\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.exe
+C:\Users\Volha_Shyrko\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.pdb
+C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.exe.config
+C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.exe
+C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.pdb
+C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.exe
+C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.pdb
+C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.csprojResolveAssemblyReference.cache
