@@ -9,9 +9,12 @@ C:\Users\Volha_Shyrko\Desktop\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.p
 C:\Users\Volha_Shyrko\Desktop\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.csprojResolveAssemblyReference.cache
 C:\Users\Volha_Shyrko\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.exe
 C:\Users\Volha_Shyrko\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.pdb
+C:\Users\Volha_Shyrko\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\log4net.dll
+C:\Users\Volha_Shyrko\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\log4net.xml
 C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.exe.config
-C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.exe
-C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.pdb
 C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.exe
 C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\ArgumentsApp.pdb
-C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.csprojResolveAssemblyReference.cache
+C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\log4net.dll
+C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\bin\Debug\log4net.xml
+C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.exe
+C:\Users\Администратор\Desktop\ArgumentsApp\ArgumentsApp\obj\Debug\ArgumentsApp.pdb

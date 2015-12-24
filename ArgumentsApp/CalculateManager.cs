@@ -2,70 +2,89 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using ArgumentsApp.MathOptions;
+using ArgumentApp;
 
 namespace ArgumentsApp
 {
     public class CalculateManager
     {
-        private Dictionary<string, ICalculate> options = new Dictionary<string, ICalculate>(StringComparer.OrdinalIgnoreCase);
+        public Dictionary<string, ICalculate> options { get; set; }
 
-        public CalculateManager()
+        public CalculateManager(Dictionary<string, ICalculate> items)
         {
-            options.Add("sum", new Sum());
-            options.Add("+", new Sum());
-            options.Add("min", new Min());
-            options.Add("sqrt", new Sqrt());
-            options.Add("^", new Sqrt());
-            options.Add("mult", new Mult());
-            options.Add("*", new Mult());
+            this.options = items;
         }
 
-        public void Calculate(string data)
+        public double? Calculate(string data, out Exception exception)
         {
+            data = data.Trim();
+            exception = null;
+
             if (data.Contains(","))
             {
-                Console.WriteLine("Wrong figure format! Correct is following: 1.2");
-                return;
+                Console.WriteLine("Wrong figure format! Correct is as following: 1.2");
+                return null;
             }
 
             try
             {
-                int indexStart = data.IndexOf(" ");
-                string option = data.Substring(0, indexStart);
+                var mathOption = OptionIdentification(data);
+                Logger.Instance.Info("Option Identification is successful");
 
-                var value = options.First(x => x.Key == option).Value;
+                double[] figures = FiguresIdentification(data);
+                Logger.Instance.Info("Figures Identification is successful");
 
-                int lenght = data.Length - indexStart;
-                string figures = data.Substring(indexStart + 1, lenght - 1);
+                double result = mathOption.Calculate(figures);
+                Logger.Instance.Info("Calculation is successful");
 
-                string[] itemsArray = figures.Split(' ');
-                List<double> list = new List<double>(); 
-
-                for (int i = 0; i < itemsArray.Length; i++)
-                {
-                    if (!string.IsNullOrWhiteSpace(itemsArray[i]))
-                    {
-                        list.Add(double.Parse(itemsArray[i].Trim(), CultureInfo.GetCultureInfo("en-us")));
-                    }
-                }
-
-                double result = value.Calculate(list.ToArray());
-
-                Console.WriteLine("The result is: " + result + "\n");
+                return result;
             }
-            catch (InvalidOperationException)
+            catch (InvalidOperationException ex)
             {
-                Console.WriteLine("Wrong input! Enter whitespace between argument and figure.\n");
+                exception = ex;
+                Console.WriteLine("Wrong input!");
+                Logger.Instance.Warning(ex);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (ArgumentOutOfRangeException ex)
             {
+                exception = ex;
                 Console.WriteLine("Error! Wrong format!\n");
+                Logger.Instance.Warning(ex);
             }
             catch (Exception ex)
             {
+                exception = ex;
                 Console.WriteLine("Error! " + ex.Message + "\n");
+                Logger.Instance.Error(ex);
             }
+            return null;
+        }
+
+        private ICalculate OptionIdentification(string data)
+        {
+            int optionLength = data.IndexOf(" ");
+            string option = data.Substring(0, optionLength);
+            var mathOption = options.First(x => x.Key == option.ToLower()).Value;
+
+            return mathOption;
+        }
+
+        private double[] FiguresIdentification(string data)
+        {
+            int optionLength = data.IndexOf(" ");
+            int figuresLenght = data.Length - optionLength;
+            string figures = data.Substring(optionLength + 1, figuresLenght - 1);
+
+            string[] itemsArray = figures.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+
+            double[] result = new double[itemsArray.Length];
+
+            for (int i = 0; i < itemsArray.Length; i++)
+            {
+                result[i] = double.Parse(itemsArray[i].Trim(), CultureInfo.GetCultureInfo("en-us"));
+            }
+
+            return result;
         }
     }
 }

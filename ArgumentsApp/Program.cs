@@ -1,29 +1,36 @@
 ﻿using System;
-using ArgumentsApp.MathOptions;
+using ArgumentApp;
 
 namespace ArgumentsApp
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            CalculateManager manager = new CalculateManager();
-            string text;
+            var options = Settings.GetOptions();
+            Logger.Instance.Info("Options are added successfully");
 
-            while(true)
+            CalculateManager manager = new CalculateManager(options);
+
+            while (true)
             {
                 Console.WriteLine("The following options are available:\n - sum\n - sqrt\n - mult\n - min\n - exit");
                 Console.WriteLine("Please note decimal figure format! e.g. 1.2");
                 Console.WriteLine("Please enter the option");
 
-                text = Console.ReadLine().Trim();
+                string text = Console.ReadLine();
 
                 if (text.ToLower() == "exit")
                 {
                     return;
                 }
+                Exception exception;
+                var result = manager.Calculate(text, out exception);
 
-                manager.Calculate(text);
+                if (result != null)
+                {
+                    Console.WriteLine("The result is: " + result + "\n");
+                }
             }
         }
     }

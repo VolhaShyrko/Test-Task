@@ -8,10 +8,6 @@ namespace ArgumentsApp.MathOptions
         {
             double sum = array.Sum();
             return sum;
-
-
         }
-
-        
     }
 }

@@ -12,6 +12,7 @@ namespace ArgumentsApp.MathOptions
 
                 return sqrt;
             }
+
             throw new ArgumentException("Only one figure can be processed!");
         }
     }
